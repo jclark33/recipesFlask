@@ -25,6 +25,11 @@ class Recipe(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(4096))
 
+@app.route("/addnew", methods=["GET","ADD"])
+def addnew():
+    if request.method == "GET":
+        # YOU LEFT OFF HERE GENIUS
+
 @app.route("/", methods=["GET","POST"])
 def index():
     if request.method == "GET":
