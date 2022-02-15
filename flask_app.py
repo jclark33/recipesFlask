@@ -20,13 +20,18 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
-comments = []
+class Recipe(db.Model):
+    __tablename__ = "recipes"
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(4096))
 
 @app.route("/", methods=["GET","POST"])
 def index():
     if request.method == "GET":
-        return render_template("index.html", comments=comments)
+        return render_template("index.html", comments=Recipe.query.all())
 
-    comments.append(request.form["contents"])
+    comment = Recipe(name = request.form["name"])
+    db.session.add(comment)
+    db.session.commit()
     return redirect(url_for('index'))
 
