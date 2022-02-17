@@ -24,10 +24,14 @@
             </div>
         </nav>
         <div class="container">
-
             <div class="row">
-                I'm under construction!
+                Current recipes added:
             </div>
+            {% for name in names %}
+            <div class="row">
+                {{ name.name }}
+            </div>
+            {% endfor%}
 
 
     </div><!-- /.container -->
