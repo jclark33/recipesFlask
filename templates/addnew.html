@@ -43,22 +43,333 @@
                 <label for="steps">Directions:</label>
                 <textarea id="steps" name="steps" placeholder="Don't forget to preheat..."></textarea><br><br>
 
-                <label for="ing">Amounts:</label>
-                <label for="ingu">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Units:</label>
-                <label for="ingn">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ingredients:</label><br>
 
-                <input type="number" id="ing" name="ing"><input type="text" id="ingu" name="ingu"><input type="text" id="ingn" name="ingn"><br>
-                <input type="number" id="ing1" name="ing1"><input type="text" id="ingu1" name="ingu1"><input type="text" id="ingn1" name="ingn1"><br>
-                <input type="number" id="ing2" name="ing2"><input type="text" id="ingu2" name="ingu2"><input type="text" id="ingn2" name="ingn2"><br>
-                <input type="number" id="ing3" name="ing3"><input type="text" id="ingu3" name="ingu3"><input type="text" id="ingn3" name="ingn3"><br>
-                <input type="number" id="ing4" name="ing4"><input type="text" id="ingu4" name="ingu4"><input type="text" id="ingn4" name="ingn4"><br>
-                <input type="number" id="ing5" name="ing5"><input type="text" id="ingu5" name="ingu5"><input type="text" id="ingn5" name="ingn5"><br>
-                <input type="number" id="ing6" name="ing6"><input type="text" id="ingu6" name="ingu6"><input type="text" id="ingn6" name="ingn6"><br>
-                <input type="number" id="ing7" name="ing7"><input type="text" id="ingu7" name="ingu7"><input type="text" id="ingn7" name="ingn7"><br>
-                <input type="number" id="ing8" name="ing8"><input type="text" id="ingu8" name="ingu8"><input type="text" id="ingn8" name="ingn8"><br>
-                <input type="number" id="ing9" name="ing9"><input type="text" id="ingu9" name="ingu9"><input type="text" id="ingn9" name="ingn9"><br>
-                <input type="number" id="ing0" name="ing0"><input type="text" id="ingu0" name="ingu0"><input type="text" id="ingn0" name="ingn0"><br><br>
+                <label for="ing">Ingredients:</label><br>
+                <div><small>Don't include basic items like water, oil, salt, etc.</small></div><br>
 
+                <select name="ing" id="ing">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                </select>
+                <select name="ingu" id="ingu">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn" name="ingn"><br><br>
+
+                <select name="ing1" id="ing1">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                </select>
+                <select name="ingu1" id="ingu1">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn1" name="ingn1"><br><br>
+
+                <select name="ing2" id="ing2">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                </select>
+                <select name="ingu2" id="ingu2">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn2" name="ingn2"><br><br>
+
+                <select name="ing3" id="ing3">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                </select>
+                <select name="ingu3" id="ingu3">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn3" name="ingn3"><br><br>
+
+                <select name="ing4" id="ing4">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                </select>
+                <select name="ingu4" id="ingu4">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn4" name="ingn4"><br><br>
+
+                <select name="ing5" id="ing5">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                </select>
+                <select name="ingu5" id="ingu5">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn5" name="ingn5"><br><br>
+
+                <select name="ing6" id="ing6">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                </select>
+                <select name="ingu6" id="ingu6">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn6" name="ingn6"><br><br>
+
+                <select name="ing7" id="ing7">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                </select>
+                <select name="ingu7" id="ingu7">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn7" name="ingn7"><br><br>
+
+                <select name="ing8" id="ing8">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                </select>
+                <select name="ingu8" id="ingu8">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn8" name="ingn8"><br><br>
 
                 <input type="submit" class="btn btn-success" value="Add">
             </form>

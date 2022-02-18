@@ -51,38 +51,32 @@ def addnew():
         db.session.add(r1)
         db.session.commit()
 
-        if request.form["ing"]:
+        if request.form["ingn"]:
             ing = Ingredient(name=request.form["ingn"], amount=request.form["ing"], unit= request.form["ingu"], recipe_id=r1.id)
             db.session.add(ing)
-        if request.form["ing1"]:
+        if request.form["ingn1"]:
             ing = Ingredient(name=request.form["ingn1"], amount=request.form["ing1"], unit= request.form["ingu1"], recipe_id=r1.id)
             db.session.add(ing)
-        if request.form["ing2"]:
+        if request.form["ingn2"]:
             ing = Ingredient(name=request.form["ingn2"], amount=request.form["ing2"], unit= request.form["ingu2"], recipe_id=r1.id)
             db.session.add(ing)
-        if request.form["ing3"]:
+        if request.form["ingn3"]:
             ing = Ingredient(name=request.form["ingn3"], amount=request.form["ing3"], unit= request.form["ingu3"], recipe_id=r1.id)
             db.session.add(ing)
-        if request.form["ing4"]:
+        if request.form["ingn4"]:
             ing = Ingredient(name=request.form["ingn4"], amount=request.form["ing4"], unit= request.form["ingu4"], recipe_id=r1.id)
             db.session.add(ing)
-        if request.form["ing5"]:
+        if request.form["ingn5"]:
             ing = Ingredient(name=request.form["ingn5"], amount=request.form["ing5"], unit= request.form["ingu5"], recipe_id=r1.id)
             db.session.add(ing)
-        if request.form["ing6"]:
+        if request.form["ingn6"]:
             ing = Ingredient(name=request.form["ingn6"], amount=request.form["ing6"], unit= request.form["ingu6"], recipe_id=r1.id)
             db.session.add(ing)
-        if request.form["ing7"]:
+        if request.form["ingn7"]:
             ing = Ingredient(name=request.form["ingn7"], amount=request.form["ing7"], unit= request.form["ingu7"], recipe_id=r1.id)
             db.session.add(ing)
-        if request.form["ing8"]:
+        if request.form["ingn8"]:
             ing = Ingredient(name=request.form["ingn8"], amount=request.form["ing8"], unit= request.form["ingu8"], recipe_id=r1.id)
-            db.session.add(ing)
-        if request.form["ing9"]:
-            ing = Ingredient(name=request.form["ingn9"], amount=request.form["ing9"], unit= request.form["ingu9"], recipe_id=r1.id)
-            db.session.add(ing)
-        if request.form["ing0"]:
-            ing = Ingredient(name=request.form["ingn0"], amount=request.form["ing0"], unit= request.form["ingu0"], recipe_id=r1.id)
             db.session.add(ing)
 
         db.session.commit()
