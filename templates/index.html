@@ -25,13 +25,33 @@
         </nav>
         <div class="container">
             <div class="row">
-                <b>Current recipes added:</b><br>
-            </div>
-            {% for name in names %}
+                <b><big>Make a Menu</big></b><br><br>
+                <form action="/" method="POST">
+                    <label for="choose">Find recipes based on:</label>&emsp;<select name="choose" id="choose">
+                        <option value="1">Ingredient</option>
+                        <option value="2">Recipe</option>
+                    </select><br><br>
+
+                    <label for="search">Find me recipes with:</label>&emsp;<input type="text" name="search" id="search"><br><br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <input type="submit" class="btn btn-success" value="Search">
+                </form>
+            </div><br><br>
             <div class="row">
-                &emsp;{{ name.name }}&emsp;&emsp;<small><i>{{ name.description }}</i></small>
+                <b><big>Your Recipe Options</big></b><br>
+            </div>
+            {% for recipe in recipes %}
+            <div class="row">
+                &emsp;{{ recipe.name }}&emsp;&emsp;<small><i>{{ recipe.description }}</i></small>
+            </div>
+            {% endfor %}<br><br>
+            {% for name in output %}
+            <div class="row">
+                &emsp;{{ name }}&emsp;&emsp;
             </div>
             {% endfor%}
+
+
 
 
     </div><!-- /.container -->
