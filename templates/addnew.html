@@ -31,13 +31,17 @@
 
 
         <div class="row">
-            <form method="ADD">
+            <form action='/addnew' method="POST">
 
                 <label for="name">Recipe Name:</label>
                 <input type="text" id="name" name="name"><br><br>
 
                 <label for="description">Description:</label>
                 <textarea id="description" name="description" placeholder="What makes this meal good?"></textarea><br><br>
+
+
+                <label for="steps">Directions:</label>
+                <textarea id="steps" name="steps" placeholder="Don't forget to preheat..."></textarea><br><br>
 
                 <label for="ing">Amounts:</label>
                 <label for="ingu">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Units:</label>
@@ -55,57 +59,6 @@
                 <input type="number" id="ing9" name="ing9"><input type="text" id="ingu9" name="ingu9"><input type="text" id="ingn9" name="ingn9"><br>
                 <input type="number" id="ing0" name="ing0"><input type="text" id="ingu0" name="ingu0"><input type="text" id="ingn0" name="ingn0"><br><br>
 
-                <label for="steps">Directions:</label>
-                <textarea id="steps" name="steps" placeholder="Don't forget to preheat..."></textarea><br><br>
-
-                <label for="avocado">Avocado:</label>
-                <input type="checkbox" id="avocado" name="avocado"><br>
-                <label for="pepper">Bell Pepper:</label>
-                <input type="checkbox" id="pepper" name="pepper"><br>
-                <label for= "broccoli">Broccoli:</label>
-                <input type="checkbox" id="broccoli" name="broccoli"><br>
-                <label for="cauli">Cauliflower:</label>
-                <input type="checkbox" id="cauli" name="cauli"><br>
-                <label for="carrots">Carrots:</label>
-                <input type="checkbox" id="carrots" name="carrots"><br>
-                <label for="celery">Celery:</label>
-                <input type="checkbox" id="celery" name="celery"><br>
-                <label for="cabbage">Cabbage:</label>
-                <input type="checkbox" id="cabbage" name="cabbage"><br>
-                <label for="cucumber">Cucumber:</label>
-                <input type="checkbox" id="cucumber" name="cucumber"><br>
-                <label for="grapetom">Grape Tomato:</label>
-                <input type="checkbox" id="grapetom" name="grapetom"><br>
-                <label for="kale">Kale:</label>
-                <input type="checkbox" id="kale" name="kale"><br>
-                <label for="lemon">Lemon:</label>
-                <input type="checkbox" id="lemon" name="lemon"><br>
-                <label for="lettuce">Lettuce:</label>
-                <input type="checkbox" id="lettuce" name="lettuce"><br>
-                <label for="lime">Lime:</label>
-                <input type="checkbox" id="lime" name="lime"><br>
-                <label for="mushroom">Mushrooms:</label>
-                <input type="checkbox" id="mushrooms" name="mushrooms"><br>
-                <label for="peas">Peas:</label>
-                <input type="checkbox" id="peas" name="peas"><br>
-                <label for="poblano">Poblano Pepper:</label>
-                <input type="checkbox" id="poblano" name="poblano"><br>
-                <label for="potatoes">Potatoes:</label>
-                <input type="checkbox" id="potatoes" name="potatoes"><br>
-                <label for="redcab">Red Cabbage:</label>
-                <input type="checkbox" id="redcab" name="redcab"><br>
-                <label for="scallion">Scallions:</label>
-                <input type="checkbox" id="scallion" name="scallion"><br>
-                <label for="snowpea">Snow Peas:</label>
-                <input type="checkbox" id="snowpea" name="snowpea"><br>
-                <label for="spinach">Spinach:</label>
-                <input type="checkbox" id="spinach" name="spinach"><br>
-                <label for="sweetpotato">Sweet Potatoes:</label>
-                <input type="checkbox" id="sweetpotato" name="sweetpotato"><br>
-                <label for="tomato">Tomato:</label>
-                <input type="checkbox" id="tomato" name="tomato"><br>
-                <label for="zucchini">Zucchini:</label>
-                <input type="checkbox" id="zucchini" name="zucchini"><br><br>
 
                 <input type="submit" class="btn btn-success" value="Add">
             </form>
