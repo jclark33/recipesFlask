@@ -18,33 +18,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand" href="/">Home</a>
                 <a class="navbar-brand" href="/addnew">Add Recipe</a>
                 </div>
             </div>
         </nav>
         <div class="container">
-            <div class="row">
-                <b><big>Make a Menu</big></b><br><br>
-                This web app is still under construction! Feel free to add new recipes, but the menu function is not yet complete.<br><br>
-                <form action="/" method="POST">
 
-                    <label for="search">Find me recipes using:</label>&emsp;<input type="text" name="search" id="search"><br><br>
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                    <input type="submit" class="btn btn-success" value="Search">
-                </form>
-            </div><br><br>
-            <div class="row">
-                <b><big>Current Recipes On File:</big></b><br>
-            </div>
+        <div class="row">
+            <big><b>Your recipe results:</b></big>
+        </div><br>
 
-            {% for recipe in recipes %}
-            <div class="row">
-                &emsp;{{ recipe.name }}&emsp;&emsp;<small><i>{{ recipe.description }}</i></small>
-            </div>
-            {% endfor %}<br><br>
+        {% for ingredient in ingredients %}
+        <div class="row">
+            &emsp;&emsp;<i></i>{{ ingredient.recipe.name }}</i>&emsp;<small>uses&nbsp;{{ ingredient.amount }}&nbsp;{{ ingredient.unit }}</small>
+        </div>
+        {% endfor %}
+        <br>
 
-
+        <div class="row"><form action="/menu" method="POST">
+            <input type="submit" class="btn btn-success" value = "Create menu">
+        </form></div>
 
 
 

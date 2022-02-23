@@ -85,31 +85,14 @@ def addnew():
 
 @app.route("/", methods=["GET","POST"])
 def index():
-    output=[]
     if request.method=="POST":
-        var = request.form["choose"]
         term = request.form["search"]
-        if var==1:
-            ingredients=Ingredient.query.all()
-            for ingredient in ingredients:
-                if ingredient.name == term:
-                    add = ingredient.recipe
-                    output.append(add)
-                else:
-                    continue
-        elif var==2:
-            ingredients=Ingredient.query.all()
-            for row in ingredients:
-                if row.recipe==term:
-                    for ingredient in ingredients:
-                        if ingredient.name == row.name:
-                            add = ingredient.recipe
-                            output.append(add)
-                        else:
-                            continue
-                else:
-                    continue
-        return redirect(url_for('index'))
+        return render_template("results.html", ingredients = Ingredient.query.filter_by(name = term).all())
     recipes = Recipe.query.all()
-    return render_template("index.html", output=output, recipes = recipes)
+    return render_template("index.html",recipes = recipes)
+
+
+
+
+
 
