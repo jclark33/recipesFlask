@@ -20,27 +20,31 @@
                 </button>
                 <a class="navbar-brand" href="#">Home</a>
                 <a class="navbar-brand" href="/addnew">Add Recipe</a>
+                <a class="navbar-brand" href="/menu">View Menu</a>
                 </div>
             </div>
         </nav>
         <div class="container">
             <div class="row">
-                <b><big>Make a Menu</big></b><br><br>
-                This web app is still under construction! Feel free to add new recipes, but the menu function is not yet complete.<br><br>
+                This web app is still under construction!<br> Feel free to explore, but know that the features are not yet complete.<br><br>
                 <form action="/" method="POST">
 
-                    <label for="search">Find me recipes using:</label>&emsp;<input type="text" name="search" id="search"><br><br>
-                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <label for="search">Find me recipes using:</label>&emsp;<input type="text" name="search" id="search">&emsp;
                     <input type="submit" class="btn btn-success" value="Search">
                 </form>
-            </div><br><br>
+            </div>
+            <div class="row"><form action="/results" method="POST">
+                <label for="name">Add recipe to my menu:</label>&emsp;<input type="text" name="name" id="name">
+                <input type="submit" class="btn btn-success" value = "Add to Menu">
+            </form></div>
+            <br>
             <div class="row">
                 <b><big>Current Recipes On File:</big></b><br>
             </div>
 
             {% for recipe in recipes %}
             <div class="row">
-                &emsp;{{ recipe.name }}&emsp;&emsp;<small><i>{{ recipe.description }}</i></small>
+                &emsp;{{ recipe.name }}<br>&emsp;&emsp;&emsp;&emsp;<small><i>{{ recipe.description }}</i></small>
             </div>
             {% endfor %}<br><br>
 

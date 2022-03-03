@@ -27,20 +27,15 @@
         <div class="container">
 
         <div class="row">
-            <big><b>Your recipe results:</b></big>
+            <big><b>Your grocery list:</b></big>
         </div><br>
 
         {% for ingredient in ingredients %}
         <div class="row">
-            &emsp;&emsp;<i>{{ ingredient.recipe.name }}</i>&emsp;<small>uses&nbsp;{{ ingredient.amount }}&nbsp;{{ ingredient.unit }}&nbsp;{{ ingredient.name }}</small>
+            <i>&emsp;&emsp;{{ ingredient.sum_amt }}&emsp;{{ ingredient.unit }}&nbsp;{{ ingredient.name }}</i>
         </div>
         {% endfor %}
         <br>
-
-        <div class="row"><form action="/results" method="POST">
-            <label for="name">Recipe:</label>&emsp;<input type="text" name="name" id="name">
-            <input type="submit" class="btn btn-success" value = "Add to menu">
-        </form></div>
 
 
 

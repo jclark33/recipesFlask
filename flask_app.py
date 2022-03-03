@@ -3,6 +3,7 @@
 from flask import Flask, redirect, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from sqlalchemy import not_
 # the database password is hellodata
 
 app = Flask(__name__)
@@ -41,6 +42,7 @@ class Ingredient(db.Model):
      recipe_id = db.Column(db.Integer, db.ForeignKey('book.id'),nullable=True)
      recipe = db.relationship('Recipe', foreign_keys=recipe_id)
 
+menu = []
 
 @app.route("/addnew", methods=["GET","POST"])
 def addnew():
@@ -87,9 +89,38 @@ def addnew():
 def index():
     if request.method=="POST":
         term = request.form["search"]
-        return render_template("results.html", ingredients = Ingredient.query.filter_by(name = term).all())
-    recipes = Recipe.query.all()
-    return render_template("index.html",recipes = recipes)
+        return render_template("results.html", ingredients = Ingredient.query.filter(Ingredient.name.contains(term)).all())
+    return render_template("index.html", recipes = Recipe.query.all())
+
+@app.route("/results", methods=["GET", "POST"])
+def results():
+    if request.method=="POST":
+        term = request.form["name"]
+        recipe = Recipe.query.filter(Recipe.name.like(term)).first()
+        menu.append(recipe.id)
+    return redirect(url_for('index'))
+
+@app.route("/menu", methods=["GET","POST"])
+def createMenu():
+    if request.method=="POST":
+        menu.clear()
+    return render_template("menu.html", recipes = Recipe.query.filter(Recipe.id.in_(menu)).all(), ingredients = Ingredient.query.all())
+
+@app.route("/build", methods=["GET","POST"])
+def buildMenu():
+    if request.method=="POST":
+        ingredients = Ingredient.query.all()
+        note = []
+        for ingredient in ingredients:
+            for row in menu:
+                if ingredient.recipe_id == row:
+                    note.append(ingredient.name)
+    return render_template("results.html", ingredients = Ingredient.query.filter(Ingredient.name.in_(note), not_(Ingredient.recipe_id.in_(menu))).all())
+
+@app.route("/grocery", methods=["GET","POST"])
+def printList():
+    if request.method=="POST":
+        return render_template("grocerylist.html", ingredients = db.session.query(Ingredient.name, Ingredient.unit, db.func.sum(Ingredient.amount).label("sum_amt")).group_by(Ingredient.name).filter(Ingredient.recipe_id.in_(menu)).all())
 
 
 
