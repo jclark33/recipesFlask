@@ -80,7 +80,18 @@ def addnew():
         if request.form["ingn8"]:
             ing = Ingredient(name=request.form["ingn8"], amount=request.form["ing8"], unit= request.form["ingu8"], recipe_id=r1.id)
             db.session.add(ing)
-
+        if request.form["ingn9"]:
+            ing = Ingredient(name=request.form["ingn9"], amount=request.form["ing9"], unit= request.form["ingu9"], recipe_id=r1.id)
+            db.session.add(ing)
+        if request.form["ingn10"]:
+            ing = Ingredient(name=request.form["ingn10"], amount=request.form["ing10"], unit= request.form["ingu10"], recipe_id=r1.id)
+            db.session.add(ing)
+        if request.form["ingn11"]:
+            ing = Ingredient(name=request.form["ingn11"], amount=request.form["ing11"], unit= request.form["ingu11"], recipe_id=r1.id)
+            db.session.add(ing)
+        if request.form["ingn12"]:
+            ing = Ingredient(name=request.form["ingn12"], amount=request.form["ing12"], unit= request.form["ingu12"], recipe_id=r1.id)
+            db.session.add(ing)
         db.session.commit()
         return redirect(url_for('addnew'))
 
