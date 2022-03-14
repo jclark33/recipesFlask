@@ -3,27 +3,23 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='leaf.ico') }}">
 
-        <title>Add a new recipe</title>
-    </head>
+        <title>Julia's Recipe Box</title>
 
-    <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container">
+        <nav class="navbar">
+
                 <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="https://jclark33.pythonanywhere.com">Home</a>
-                <a class="navbar-brand" href="#">Add Recipe</a>
-                <a class="navbar-brand" href="/menu">View Menu</a>
+                <img src="{{ url_for('static', filename='icon.png') }}">
+                <a class="navbar-tab" href="/">Home</a>
+                <a class="navbar-tab" href="/addnew">Add Recipe</a>
+                <a class="navbar-tab" href="/menu">View Menu</a>
                 </div>
-            </div>
+
         </nav>
+    </head>
+    <body>
         <div class="container">
 
             <div class="row">
@@ -443,6 +439,182 @@
                     <option value="leaves">leaves</option>
                 </select>
                 <input type="text" id="ingn8" name="ingn8"><br><br>
+
+                <select name="ing9" id="ing9">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>
+                <select name="ingu9" id="ingu9">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="can">can</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn9" name="ingn9"><br><br>
+
+                <select name="ing10" id="ing10">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>
+                <select name="ingu10" id="ingu10">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="can">can</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn10" name="ingn10"><br><br>
+
+                <select name="ing11" id="ing11">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>
+                <select name="ingu11" id="ingu11">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="can">can</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn11" name="ingn11"><br><br>
+
+                <select name="ing12" id="ing12">
+                    <option value="0.25">1/4</option>
+                    <option value="0.33">1/3</option>
+                    <option value="0.5">1/2</option>
+                    <option value="0.66">2/3</option>
+                    <option value="0.75">3/4</option>
+                    <option value="1">1</option>
+                    <option value="1.25">1 1/4</option>
+                    <option value="1.5">1 1/2</option>
+                    <option value="1.75">1 3/4</option>
+                    <option value="2">2</option>
+                    <option value="2.25">2 1/4</option>
+                    <option value="2.5">2 1/2</option>
+                    <option value="2.75">2 3/4</option>
+                    <option value="3">3</option>
+                    <option value="3.25">3 1/4</option>
+                    <option value="3.5">3 1/2</option>
+                    <option value="3.75">3 3/4</option>
+                    <option value="4">4</option>
+                    <option value="4.5">4 1/2</option>
+                    <option value="5">5</option>
+                    <option value="5.5">5 1/2</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>
+                <select name="ingu12" id="ingu12">
+                    <option value="whole">whole</option>
+                    <option value="cups">cups</option>
+                    <option value="Tbsp">Tbsp</option>
+                    <option value="tsp">tsp</option>
+                    <option value="box">box</option>
+                    <option value="can">can</option>
+                    <option value="ounces">ounces</option>
+                    <option value="cloves">cloves</option>
+                    <option value="leaves">leaves</option>
+                </select>
+                <input type="text" id="ingn12" name="ingn12"><br><br>
 
                 <input type="submit" class="btn btn-success" value="Add">
             </form>

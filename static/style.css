@@ -1,0 +1,93 @@
+
+
+div {
+    display: block;
+    font-family: sans-serif;
+
+}
+
+body {
+    margin-top:50px;
+}
+
+
+
+
+.row {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size:14px;
+    line-height:14px;
+    padding-top:10px;
+    padding-left:15px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.container {
+    padding-top:10px;
+}
+
+img {
+        float:left;
+        width:43;
+        height:38;
+        padding-right:18;
+        position:relative;
+        left:15px;
+        top:5px;
+}
+
+.navbar {
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    border-radius:5px;
+    margin-right:-10px;
+    margin-left:-10px;
+}
+
+.navbar-tab{
+    float:left;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform:capitalize;
+    height: 35px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    line-height:18px;
+    padding-right:15px;
+    padding-left:15px;
+    padding-top:15px;
+}
+
+.navbar a{
+    text-decoration:none;
+}
+
+.navbar a:hover {
+    background-color: #666;
+}
+
+.btn{
+    background-color: #75cf48;
+    font-size: 16px;
+    line-height: 16px;
+    color:white;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: 400;
+    border: 1px solid #75cf48;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #666;
+}
+
+.btn:active {
+    background: #144E75; }
+}

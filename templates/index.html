@@ -3,27 +3,22 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='leaf.ico') }}">
 
         <title>Julia's Recipe Box</title>
+        <nav class="navbar">
+            <div>
+                <img src="{{ url_for('static', filename='icon.png') }}">
+                <a class="navbar-tab" href="/">Home</a>
+                <a class="navbar-tab" href="/addnew">Add Recipe</a>
+                <a class="navbar-tab" href="/menu">View Menu</a>
+            </div>
+        </nav>
     </head>
 
     <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Home</a>
-                <a class="navbar-brand" href="/addnew">Add Recipe</a>
-                <a class="navbar-brand" href="/menu">View Menu</a>
-                </div>
-            </div>
-        </nav>
+
         <div class="container">
             <div class="row">
                 This web app is still under construction!<br> Feel free to explore, but know that the features are not yet complete.<br><br>
@@ -34,7 +29,7 @@
                 </form>
             </div>
             <div class="row"><form action="/results" method="POST">
-                <label for="name">Add recipe to my menu:</label>&emsp;<input type="text" name="name" id="name">
+                <label for="name">Add recipe to my menu:</label>&emsp;<input type="text" name="name" id="name">&emsp;
                 <input type="submit" class="btn btn-success" value = "Add to Menu">
             </form></div>
             <br>
