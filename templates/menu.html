@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='leaf.ico') }}">
+
+        <title>Julia's Recipe Box</title>
+
+        <nav class="navbar navbar-inverse">
+
+                <div class="navbar-header">
+                <img src="{{ url_for('static', filename='icon.png') }}">
+                <a class="navbar-tab" href="/">Home</a>
+                <a class="navbar-tab" href="/addnew">Add Recipe</a>
+                <a class="navbar-tab" href="/menu">View Menu</a>
+                </div>
+
+        </nav>
+    </head>
+    <body>
+        <div class="container">
+            {% if not recipes %}
+            <div class="row">
+                <big><b>Your menu is currently empty!</b><br><br>
+                Return to the <a href='/'>home page</a> to find some tasty options and search by ingredient.<br><br></big>
+            </div>
+            {% endif %}
+
+
+            {% for recipe in recipes %}
+            <div class="row">
+                &emsp;&ensp;<b>{{ recipe.name }}</b><br>
+                &emsp;&emsp;<i><small>{{ recipe.description }}</small></i><br>
+                {% for ingredient in ingredients %}
+                    {% if ingredient.recipe_id == recipe.id %}
+                        {{ ingredient.amount }}&nbsp;{{ ingredient.unit }}&nbsp;{{ ingredient.name }}<br>
+                    {% endif %}
+                {% endfor %}<br>
+                {{ recipe.directions }}<br><br>
+            </div>
+            {% endfor %}
+
+
+             <div class="row">
+                <form action="/build" method="POST">
+                    <input type="submit" class="btn btn-success" value = "Find Recipes with Similar Ingredients">
+                </form>
+            </div>
+            <div class="row">
+                <form action="/grocery" method="POST">
+                    <input type="submit" class="btn btn-success" value = "Print My Grocery List">
+                </form>
+            </div>
+            <div class="row">
+                <form action="/menu" method="POST">
+                    <input type="submit" class="btn btn-success" value = "Clear Menu">
+                </form>
+            </div>
+
+
+
+
+
+
+
+
+
+
+    </div><!-- /.container -->
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='leaf.ico') }}">
+
+        <title>Julia's Recipe Box</title>
+
+        <nav class="navbar">
+                <div class="navbar-header">
+                <img src="{{ url_for('static', filename='icon.png') }}">
+                <a class="navbar-tab" href="/">Home</a>
+                <a class="navbar-tab" href="/addnew">Add Recipe</a>
+                <a class="navbar-tab" href="/menu">View Menu</a>
+                </div>
+
+        </nav>
+    </head>
+
+    <body>
+        <div class="container">
+
+        <div class="row">
+            <big><b>Your grocery list:</b></big>
+        </div><br>
+
+        {% for ingredient in ingredients %}
+        <div class="row">
+            <i>&emsp;&emsp;{{ ingredient.sum_amt }}&emsp;{{ ingredient.unit }}&nbsp;{{ ingredient.name }}</i>
+        </div>
+        {% endfor %}
+        <br>
+
+
+
+
+
+    </div><!-- /.container -->
+    </body>
+</html>

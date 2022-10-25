@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='leaf.ico') }}">
+
+        <title>Julia's Recipe Box</title>
+        <nav class="navbar">
+            <div>
+                <img src="{{ url_for('static', filename='icon.png') }}">
+                <a class="navbar-tab" href="/">Home</a>
+                <a class="navbar-tab" href="/addnew">Add Recipe</a>
+                <a class="navbar-tab" href="/menu">View Menu</a>
+            </div>
+        </nav>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                This web app is still under construction!<br> Update: The add, edit, and delete functions are complete.<br>
+                Coming soon: login to save your personalized recipes and menu<br><br>
+                <form action="/" method="POST">
+
+                    <label for="search">Find me recipes using:</label>&emsp;<input type="text" name="search" id="search">&emsp;
+                    <input type="submit" class="btn btn-success" value="Search">
+                </form>
+            </div>
+            <div class="row"><form action="/results" method="POST">
+                <label for="name">Add recipe to my menu:</label>&emsp;<select name="name" id="name">
+                    {% for recipe in recipes %}
+                    <option value="{{ recipe.name }}">{{ recipe.name }}</option>
+                    {% endfor %}
+                    </select>&emsp;
+                <input type="submit" class="btn btn-success" value = "Add to Menu">
+            </form></div>
+            <div class="row"><form action="/edit" method="POST">
+                <label for="editname">Edit a recipe in the library:</label>&emsp;<select name="editname" id="editname">
+                    {% for recipe in recipes %}
+                    <option value="{{ recipe.name }}">{{ recipe.name }}</option>
+                    {% endfor %}
+                    </select>&emsp;
+                <input type="submit" class="btn btn-success" value = "Edit Recipe">
+            </form></div>
+            <div class="row"><form action="/remove" method="POST">
+                <label for="editname">Delete a recipe:</label>&emsp;<select name="delname" id="delname">
+                    {% for recipe in recipes %}
+                    <option value="{{ recipe.name }}">{{ recipe.name }}</option>
+                    {% endfor %}
+                    </select>&emsp;
+                <input type="submit" class="btn btn-success" value = "Delete">
+            </form></div>
+            <br>
+            <div class="row">
+                <b><big>Current Recipes On File:</big></b><br>
+            </div>
+
+            {% for recipe in recipes %}
+            <div class="row">
+                &emsp;{{ recipe.name }}<br>&emsp;&emsp;&emsp;&emsp;<small><i>{{ recipe.description }}</i></small>
+            </div>
+            {% endfor %}<br><br>
+
+
+
+
+
+    </div><!-- /.container -->
+    </body>
+</html>
